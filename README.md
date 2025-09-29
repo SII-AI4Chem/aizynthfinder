@@ -63,6 +63,26 @@ as interfaces to the algorithm:
 
 Consult the documentation [here](https://molecularai.github.io/aizynthfinder/) for more information.
 
+### Quick start script
+
+If you have cloned this repository and just want a working installation, run
+
+```
+./scripts/deploy_aizynthfinder.sh
+```
+
+The helper script creates an isolated virtual environment, installs the
+package with extras, downloads the public models into `~/aizynth-data`, and
+executes a smoke-test retrosynthesis job. The first argument overrides the
+data directory, and the second argument specifies the SMILES input file. The
+script is idempotent, so it is safe to rerun when you need to refresh the
+installation. Set the environment variable `AIZYNTH_EXTRAS=` before running the
+script if you prefer to install only the core package without optional extras.
+
+### Deployment guide in Chinese
+
+For a step-by-step deployment walkthrough written in Chinese, see the [AiZynthFinder 部署指南](docs/deployment_guide_zh.md).
+
 To use the tool you need
 
     1. A stock file
